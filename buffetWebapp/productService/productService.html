@@ -1,0 +1,86 @@
+<div ng-controller="productServiceController" ng-init="init()">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Új termék felvévetele a rendszerbe</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <label>Termék neve</label>
+            </div>
+            <div class="col-md-4">
+                <label>Termék ára (Ft)</label> </div>
+        </div>
+    </div>
+    <div class="row"ng-model="product">
+
+        <div class="col-md-4">
+
+            <input class="form-control" ng-model="product.productName" type="text">
+        </div>
+
+        <div class="col-md-4">
+
+            <input class="form-control" ng-model="product.productPrice" type="text">
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary btn-md " ng-click="saveNewProduct(product)">Új termék felvétele</button>
+        </div>
+    </div>
+    <div class="col-md-12 row">
+            <h3>Termék adatainak módosítása a rendszerbe</h3>
+        </div>
+    <div class="row" id="updateProduct">
+        
+
+        <div class="col-md-12 row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4" ><label>Termék</label></div> 
+               
+                <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <select class="form-control" ng-model="updateProduct">
+                    
+                 <option ng-repeat="product in products" value={{product}}>
+                     {{product.productName}} ({{product.productPrice}} Ft)
+                 </option>
+                    
+                 </select>
+            </div>
+           
+
+            
+            <div class="col-md-1"><button class="btn btn-primary btn-md " ng-click="updateProductFunction()">módosítás</button></div>
+        </div>
+      
+    </div>
+
+    <div class="row" id="saveUpdateProduct">
+                
+            <div class="col-md-12 row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4" ><label>Termék név</label></div> 
+                   <div class="col-md-2"><label>Termék ára (Ft)</label></div>
+                    <div class="col-md-1"></div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" id="updateProductPrice" ng-model="updateProduct.productName">
+                </div>
+                <div class="col-md-2">
+                        <input type="text" class="form-control" id="updateProductPrice" ng-model="updateProduct.productPrice" >
+                </div>
+               
+    
+                
+                <div class="col-md-1"><button class="btn btn-primary btn-md " ng-click="saveUpdateProduct(updateProduct)">módosítás mentése</button></div>
+            </div>
+          
+        </div>
+
+
+</div>

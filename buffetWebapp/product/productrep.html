@@ -1,0 +1,40 @@
+<div ng-controller="productrepController" ng-init="init()">
+
+    <div class="row List">
+        <h2 class="text-center">A termékek fogyása az aktuális hónapban</h2>
+
+
+        <h3 class="text-center subtitle">Az összes termék termékenkénti fogyása az aktuális hónapban</h3>
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <table class="table table-striped ">
+                <thead>
+                    <tr>
+                        <th>Termékek neve</th>
+                        <th class="text-center">Fogyás mennyisége (db)</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="productreport in productreports">
+
+                        <td>{{productreport.productName}}</td>
+                        <td class="text-center">{{productreport.sumQuantity}}</td>
+
+
+                </tbody>
+
+            </table>
+        </div>
+        <div class="col-md-1"></div>
+
+        <button class="btn btn-primary btn-md" ng-click="saveProductReport()">A riport mentése fájlba</button>
+    </div>
+    <div class="row">
+        <div class=col-md-3></div>
+        <div class="col-md-5">
+            <canvas id="productChart"></canvas>
+        </div>
+        <div class=col-md-4></div>
+    </div>
+</div>

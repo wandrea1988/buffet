@@ -1,0 +1,52 @@
+<div ng-controller="employeeServiceController" ng-init="init()">
+    <div class="row" ng-model="employee">
+        <div class="col-md-12">
+            <h3>Új vevő felvévetele a rendszerbe</h3>
+            <div class="col-md-2">
+                   
+            </div>
+            <div class="col-md-4">  <label >Vevő neve</label></div>
+        </div>
+        <div class="col-md-2"></div>
+
+        <div class="col-md-4">
+            
+            <input type="text" class="form-control" id="employeeName" ng-model="employee.employeeName">
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary btn-md " ng-click="saveNewEmployee(employee)">Új vevő regisztráció</button>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row" >
+        <div class="col-md-12">
+            <h3>Vevő módosítása a rendszerbe</h3>
+        </div>
+        <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4"> <label for="usr">Vevő neve</label></div>
+        </div>
+        <div class="row">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-4">
+
+                <select class="form-control" id="searchUpdateName" ng-model="updateEmployee">
+                        
+                     <option ng-repeat="employee in employees" value={{employee}}>
+                         {{employee.employeeName}} ({{employee.id}})</option>
+                        
+                     </select>
+           
+            <input type="text" class="form-control" id="updateInput" ng-model="updateEmployee.employeeName">
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary btn-md " id="update" ng-click="updateEmployeeFunction()">módosítás</button>
+        
+            <button class="btn btn-primary btn-md " id="saveUpdate" ng-click="saveUpdateEmployee(updateEmployee)">módosítás mentése</button></div>
+        </div>
+    </div>
+   
+
+</div>

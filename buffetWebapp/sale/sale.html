@@ -1,0 +1,85 @@
+<div class="row" ng-controller="saleController" ng-init="init()">
+
+
+    <div class="col-md-12 row saleForm">
+        <div class="col-md-12 ">
+            <h3>Vevő</h3>
+
+            <h4> Vevő neve és azonosítója</h4>
+            <select class="form-control employeeSelect" ng-model="sale.employee" id="employeeSelect">
+                 
+                <option class="optionStyle" ng-repeat="employee in employees" value={{employee}}>{{employee.employeeName}} ({{employee.id}})
+                 
+            </select>
+        </div>
+        <div class="col-md-12">
+            <h3>Termékek</h3>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-3"> <h4> Termék név</h4></div>
+            <div class="col-md-2"> <h4>Mennyiség</h4></div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-3">
+               
+                <select class="form-control" id="productInput" ng-model="saleProduct.product">
+                                 
+                    <option class="optionStyle" ng-repeat="product in products" value={{product}}>{{product.productName}} ({{product.productPrice}} Ft)
+                                 
+                </select>
+            </div>
+            <div class="col-md-2">
+               
+
+                <input class="form-control quantitySelect" id="quantityInput" min="1" ng-model="saleProduct.quantity" type="number" />
+            </div>
+            <div class="col-md-2 ">
+                
+                <button class="btn btn-primary btn-md " ng-click="pushSaleProduct()">Rendelés felvétel</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="List col-md-12 row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Termék név</th>
+                        <th>Mennyiség</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="saleProduct in sale.saleProducts">
+
+                        <td>{{saleProduct.productName}}</td>
+                        <td>{{saleProduct.quantity}}</td>
+
+
+                        <td>
+                            <button class="btn btn-success" ng-click="updateSaleProduct(saleProduct)">
+                                 <span class="glyphicon glyphicon-edit"></span>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" ng-click="deleteSaleProduct(saleProduct)">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+        <div class="col-md-1"></div>
+        <button class="btn btn-primary btn-md" ng-click="saveSale(sale)">Értékesítés lezárása</button>
+        <button class="btn btn-danger btn-md" ng-click="deleteSale()">Értékesítés törlése</button>
+
+    </div>
+</div>

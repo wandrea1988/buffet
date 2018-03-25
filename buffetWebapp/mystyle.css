@@ -1,0 +1,107 @@
+
+
+#bodybackground{
+    background-image: url("https://www.springhappenings.com/sh_content/uploads/2014/09/crsrxfllostehmuxwzqfkdarpcg0di40toehyl4mzmgrkmy3dpfzxttukvsmluvp-o.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+#header{
+background-color:goldenrod;
+margin-bottom: 2%;  
+opacity: 0.8;
+padding:1em;
+}
+
+#logo {
+height:6em;
+}
+
+.title {
+font-size: 20pt;
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+#menu{
+background-color:lightgoldenrodyellow;
+font-family: 'Source Sans Pro', sans-serif;
+padding:0%;
+margin: 0%;
+opacity: 0.8;
+
+}
+
+.menuList li {
+    border-bottom-style: solid;
+   
+    font-weight: bold;
+    font-size: 1.2em;
+    color: goldenrod;
+    padding: 1em;
+    text-align: center;
+}
+
+.menuList li a span{
+    padding-left:5%;
+}
+
+
+#content {
+background-color:lightgoldenrodyellow;
+font-family: 'Source Sans Pro', sans-serif;
+width: 60%;
+margin-right: 3%;
+padding:0%;
+opacity: 0.95;
+border-style: solid;
+border-width: 0.5em;
+border-color: goldenrod;
+padding-left:1em;
+padding-bottom:1em;
+}
+
+.homePage{
+    text-align: justify;
+    margin:3em;
+    padding-right: 1em;
+    font-size: 14pt;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.saleForm{
+    padding-left:8em;
+}
+
+
+
+.employeeSelect {
+    width: 20em;
+}
+
+.quantitySelect{
+    width: 5em;
+}
+
+.optionStyle{
+    font-size: 14pt;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.List{
+   margin-top:3em;
+   padding-left:5%;
+   padding-right: 5%;
+   font-size:14pt;
+}
+
+.subtitle{
+    text-align: left;
+    font-style: italic;
+    margin-top:3em;
+    margin-bottom:2em;
+}
+
+
